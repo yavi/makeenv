@@ -81,7 +81,7 @@ git config --global user.name "Jakub 'yavi' Neumann"
 git config --global user.email jn@s-net.pl
 git config --global core.editor vim
 git config --global diff.tool vimdiff
-
+git config --global push.default simple
 
 #### Bash setup
 
