@@ -11,4 +11,8 @@ set autoindent
 set nu
 
 set background=dark
-colorscheme solarized
+let term=$TERM
+
+if term == 'putty-256color'
+    colorscheme solarized
+endif
