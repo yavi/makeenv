@@ -3,7 +3,14 @@
 # Skrypt jest w bashu, nie ryzykujemy innego shella
 if [ ! -n "$BASH" ] ;then echo Please run this script $0 with bash; exit 1; fi
 
-VERSION=5
+# Sprawdzamy, czy mamy gita
+if ! [ -x "$(command -v git)" ]; then
+    p_err "How did we git checkout without git? Git is needed. Cannot git so exit."
+    exit 2
+fi
+
+
+VERSION=20170321
 BATCH=false #Tryb wsadowy
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -46,12 +53,6 @@ fi
 cur_shell="$(getent passwd $LOGNAME | cut -d: -f7)"
 if ! [[ ${cur_shell} =~ .*bash.* ]]; then
     p_warn "User shell is not bash - ask root to change."
-fi
-
-# Sprawdzamy, czy mamy gita
-if ! [ -x "$(command -v git)" ]; then
-    p_err "How did we git checkout without git? Git is needed. Cannot git so exit."
-    exit 2
 fi
 
 # Sprawdzamy, czy mamy curla
