@@ -157,6 +157,7 @@ if ${have_vim}; then
     vim_install_plugin vim-sensible git://github.com/tpope/vim-sensible.git
 #    vim_install_plugin base16-vim https://github.com/chriskempson/base16-vim.git
     vim_install_plugin vim-colors-solarized git://github.com/altercation/vim-colors-solarized.git
+    vim_install_plugin vim-lastplace git://github.com/farmergreg/vim-lastplace.git
 
     # Make .vimrc
     if [[ -e ~/.vimrc ]]; then mv ~/.vimrc ~/.vimrc.old; fi
