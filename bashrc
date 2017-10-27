@@ -17,3 +17,7 @@ stty -ixon
 alias telnet='TERM=xterm telnet'
 alias sshh='ssh -p2221'
 alias sftpp='sftp -oPort=2221'
+
+if [[ -e ~/.bashrc_custom ]]; then
+    source ~/.bashrc_custom
+fi

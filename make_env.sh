@@ -10,7 +10,7 @@ if ! [ -x "$(command -v git)" ]; then
 fi
 
 
-VERSION=20170830
+VERSION=20171027
 BATCH=false #Tryb wsadowy
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -100,7 +100,7 @@ if ! [[ -d ~/.bash_it ]]; then
         targs=
     fi    
     ~/.bash_it/install.sh ${targs} && p_ok "Bash-it installed" || p_err "Bash-it installation failed"
-    bash-it enable plugin base
+    # bash-it enable plugin base
 else
     p_ok "Bash-it already installed"
 fi
